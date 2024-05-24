@@ -13,26 +13,13 @@ header{
     background-color: orange;
 }
 
-li{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-}
-
-a:hover{
-    color: rgb(255, 255, 255);
-    transition: zoom 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
 header{
     position: relative;
     padding: 0 2rem;
+    z-index: 10;
 
 }
+
 
 .navbar{
     width: 100%;
@@ -56,6 +43,18 @@ header{
 
 .navbar .links li {
     margin: 0 1em;
+    list-style: none;
+}
+
+.navbar .links li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+}
+
+.navbar .links li a:hover{
+    color: rgb(255, 255, 255);
+    transition: zoom 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .navbar .toggle_btn{
@@ -85,10 +84,11 @@ header{
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 20;
 }
 
 .dropdown_menu.open{
-    height: 210px;
+    height: 230px;
 }
 
 
@@ -97,6 +97,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.dropdown_menu li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
 }
 
 .imagen img{
@@ -161,23 +167,19 @@ footer {
     height: auto;
 }
 
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2em;
-    padding: 0.5em;
-}
 
 .recetas-favoritas {
     padding: 2em;
 }
 
+.main-content {
+    padding-bottom: 300px;
+}
+
 .titulo2 {
     text-align: center;
     margin: 2em 0;
+    z-index: 5;
 }
 
 .titulo2 h1, .titulo2 h2 {
