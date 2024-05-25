@@ -39,6 +39,7 @@ header{
 .navbar .links {
     display: flex;
     list-style: none;
+    margin-top: 10px;
 }
 
 .navbar .links li {
@@ -127,7 +128,7 @@ header{
 }
 
 footer {
-    background-color: #e27637;
+    background-color: #B66E00;
     color: #000000;
     padding: 20px;
     text-align: center;
