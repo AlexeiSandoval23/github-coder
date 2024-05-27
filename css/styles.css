@@ -204,7 +204,9 @@ footer {
     max-width: 100%;
     border: 2px solid #ccc; 
     border-radius: 10px; 
-    margin: 0 auto; 
+    margin: 0 auto;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Secciones */
