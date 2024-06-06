@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+
+$primary-color: orange;
+$secondary-color: #B66E00;
+$white-color: #FFFFFF;
+$black-color: #000000;
+$font-family: 'Open Sans', sans-serif;
+$cursive-font-family: 'Mr Dafoe', cursive;
+$sans-serif-font-family: 'Lato', sans-serif;
+
+@mixin center-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin transition($property, $duration, $timing){
+    transition: $property $duration $timing;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+body {
+  height: 100vh;
+}
+
+header {
+  background-color: $primary-color;
+  position: relative;
+  padding: 0 2rem;
+  z-index: 10;
+}
+
+
+
+//navbar
+@import 'base/navbar';
+
+//footer
+@import 'base/footer';
+
+//tarjetas
+@import 'base/tarjetas';
+
+//responsive
+@import 'media';
+
+//contacto.html
+@import 'paginas/contacto';
+
+//recetas.html
+@import 'paginas/recetas';
+
+//sobrenosotros.html
+@import 'paginas/sobrenosotros';

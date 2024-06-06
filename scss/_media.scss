@@ -1,0 +1,67 @@
+@media(max-width: 992px) {
+    .navbar .links {
+      display: none;
+    }
+  
+    .navbar .toggle_btn {
+      display: block;
+    }
+  
+    .dropdown_menu {
+      display: block;
+    }
+  
+    .navbar img {
+      display: block;
+      margin: auto;
+    }
+  
+    .hero-text {
+      display: block;
+    }
+  
+    .hero img {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar .links {
+      display: none;
+    }
+  
+    .toggle_btn {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .tarjetas {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .navbar {
+      justify-content: center;
+    }
+  
+    .navbar img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .tarjetas {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .titulo2 h2 {
+      font-size: 1.5em;
+    }
+  
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+    }
+  }

@@ -1,381 +1,409 @@
-@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
-body{
-    height: 100vh;
+body {
+  height: 100vh;
 }
 
-header{
-    background-color: orange;
+header {
+  background-color: orange;
+  position: relative;
+  padding: 0 2rem;
+  z-index: 10;
 }
 
-header{
-    position: relative;
-    padding: 0 2rem;
-    z-index: 10;
-
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
 }
-
-
-.navbar{
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navbar img {
+  max-width: 50px;
+  max-height: 50px;
 }
-
-.navbar img{
-    max-width: 50px;
-    max-height: 50px;
-}
-
 .navbar .links {
-    display: flex;
-    list-style: none;
-    margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-top: 10px;
 }
-
 .navbar .links li {
-    margin: 0 1em;
-    list-style: none;
+  margin: 0 1em;
+}
+.navbar .links li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;
+}
+.navbar .links li a:hover {
+  color: #FFFFFF;
+  transition: zoom 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.navbar .toggle_btn {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.navbar .toggle_btn i {
+  color: #000000;
 }
 
-.navbar .links li a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 65px;
+  height: 0;
+  width: 300px;
+  background: rgba(253, 163, 60, 0.822);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 20;
 }
-
-.navbar .links li a:hover{
-    color: rgb(255, 255, 255);
-    transition: zoom 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.dropdown_menu.open {
+  height: 230px;
 }
-
-.navbar .toggle_btn{
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.toggle_btn i{
-    color: black;
-}
-
-.toggle_btn {
-    display: none;
-}
-
-.dropdown_menu{
-    display: none;
-    position: absolute;
-    right: 2rem;
-    top: 65px;
-    height: 0;
-    width: 300px;
-    background: rgba(253, 163, 60, 0.822);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 20;
-}
-
-.dropdown_menu.open{
-    height: 230px;
-}
-
-
-.dropdown_menu li{
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropdown_menu li a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-}
-
-.imagen img{
-    max-width: 90%;
-    height: auto;
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-}
-
-.imagen {
-    text-align: center;
-}
-
-.texto {
-    font-size: 16px;
-    max-width: 100%; 
-    width: 80%; 
-    margin: 0 auto; 
+.dropdown_menu li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;
 }
 
 footer {
-    background-color: #B66E00;
-    color: #FFFFFF;
-    padding: 40px 20px;
-    text-align: left;
-    font-family: Arial, sans-serif;
+  background-color: #B66E00;
+  color: #FFFFFF;
+  padding: 40px 20px;
+  text-align: left;
+  font-family: Arial, sans-serif;
 }
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+footer .footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-.footer-section {
-    flex: 1;
-    margin: 10px;
-    min-width: 200px;
-    text-align: center;
+footer .footer-container .footer-section {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+  text-align: center;
 }
-
-.footer-section h2 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-family: 'Mr Dafoe', cursive;
-    color: #fff;
-    text-align: center;
+footer .footer-container .footer-section h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-family: "Mr Dafoe", cursive;
+  color: #FFFFFF;
 }
-
-.footer-section p, .footer-section ul, .footer-section li {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 5px 0;
-    font-family: 'Lato', sans-serif;
+footer .footer-container .footer-section p, footer .footer-container .footer-section ul, footer .footer-container .footer-section li {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 5px 0;
+  font-family: "Lato", sans-serif;
 }
-
-.footer-section ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
+footer .footer-container .footer-section ul {
+  list-style-type: none;
+  padding: 0;
 }
-
-.footer-section ul li {
-    margin-bottom: 10px;
+footer .footer-container .footer-section ul li {
+  margin-bottom: 10px;
 }
-
-.footer-section ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
+footer .footer-container .footer-section ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
 }
-
-.footer-section ul li a:hover {
-    text-decoration: underline;
+footer .footer-container .footer-section ul li a:hover {
+  text-decoration: underline;
 }
-
-.copy {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #000000;
+footer .copy {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #000000;
 }
-
 
 .mapa {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  text-align: center;
+  margin: 20px 0;
 }
-
 .mapa iframe {
-    max-width: 100%;
-    border: 2px solid #ccc; 
-    border-radius: 10px; 
-    margin: 0 auto;
-    margin-bottom: 50px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Secciones */
-.hero {
-    position: relative;
-    text-align: center;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-}
-
-
-.recetas-favoritas {
-    padding: 2em;
-}
-
-.main-content {
-    padding-bottom: 300px;
-}
-
-.titulo2 {
-    text-align: center;
-    margin: 2em 0;
-    z-index: 5;
-    
-}
-
-.titulo2 h1, .titulo2 h2 {
-    margin: 0;
-    padding-bottom: 0.5em;
-    font-family: 'Mr Dafoe', cursive;
-}
-
-
-.main-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
+  max-width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .tarjetas {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.tarjetas .tarjeta {
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.tarjetas .tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.tarjetas .tarjeta img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.tarjetas .tarjeta p {
+  font-size: 1rem;
+  color: #666;
+  width: 50%;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 25%;
+  flex-grow: 1;
+}
+.tarjetas .tarjeta .boton {
+  display: block;
+  width: 100%;
+  margin: 0 auto 15px;
+  padding: 15px 0;
+  text-align: center;
+  background-color: #B66E00;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 0 0 10px 10px;
+  transition: background-color 0.3s ease;
+  margin: auto;
+}
+.tarjetas .tarjeta .boton:hover {
+  background-color: #ff4500;
+}
+.tarjetas .tarjeta a {
+  text-align: center;
 }
 
-.tarjeta {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
+.recetas-favoritas {
+  padding: 2em;
 }
 
-
-
-.tarjeta:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.main-content {
+  padding-bottom: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
 }
 
-.tarjeta img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+.titulo2 {
+  text-align: center;
+  margin: 2em 0;
+  z-index: 5;
+}
+.titulo2 h1, .titulo2 h2 {
+  margin: 0;
+  padding-bottom: 0.5em;
+  font-family: "Mr Dafoe", cursive;
 }
 
-.tarjeta p {
-    font-size: 1rem;
-    color: #666;
-    width: 50%;
-    text-align: center;
-    margin-top: 5%;
-    margin-left: 25%;
-    flex-grow: 1;
-}
-
-.tarjeta .boton {
+@media (max-width: 992px) {
+  .navbar .links {
+    display: none;
+  }
+  .navbar .toggle_btn {
     display: block;
-    width: 100%;
-    margin: 0 auto 15px;
-    padding: 15px 0;
-    text-align: center;
-    background-color: #B66E00;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 0 0 10px 10px;
-    transition: background-color 0.3s;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+  .navbar img {
+    display: block;
     margin: auto;
+  }
+  .hero-text {
+    display: block;
+  }
+  .hero img {
+    display: none;
+  }
 }
-
-.tarjeta a{
-    text-align: center;
-}
-
-.tarjeta .boton:hover {
-    background-color: #ff4500;
-}
-
-
-/*probando responsive*/
-
-@media(max-width: 992px){
-    .navbar .links {
-        display: none;
-    }
-
-    .navbar .toggle_btn{
-        display: block;
-    }
-
-    .dropdown_menu{
-        display: block;
-    }
-
-    .navbar img{
-        display:block;
-        margin: auto;
-    }
-
-    .hero-text{
-        display: block;
-    }
-
-    .hero img{
-        display: none;
-    }
-}
-
 @media (max-width: 768px) {
-    .navbar .links {
-        display: none;
-    }
-    .toggle_btn {
-        display: block;
-        cursor: pointer;
-    }
-    .tarjetas {
-        grid-template-columns: 1fr;
-    }
+  .navbar .links {
+    display: none;
+  }
+  .toggle_btn {
+    display: block;
+    cursor: pointer;
+  }
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
 }
-
 @media (max-width: 600px) {
-    .navbar {
-        justify-content: center;
-    }
-
-    .navbar img {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .tarjetas {
-        grid-template-columns: 1fr;
-    }
+  .navbar {
+    justify-content: center;
+  }
+  .navbar img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
 }
-
 @media (max-width: 480px) {
-    .titulo2 h2 {
-        font-size: 1.5em;
-    }
-    .mapa iframe {
-        width: 100%;
-        height: 300px;
-    }
+  .titulo2 h2 {
+    font-size: 1.5em;
+  }
+  .mapa iframe {
+    width: 100%;
+    height: 300px;
+  }
 }
+.contacto-imagen {
+  text-align: center;
+  margin: 20px 0;
+}
+.contacto-imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px auto;
+  max-width: 800px;
+}
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form textarea {
+  width: calc(100% - 22px);
+}
+form .left {
+  flex: 1;
+  margin-right: 10px;
+}
+form .right {
+  flex: 1;
+  margin-left: 10px;
+}
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #B66E00;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 100px;
+}
+form button:hover {
+  background-color: #ff4500;
+}
+
+.llamativo {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #B66E00;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: "Mr Dafoe", cursive;
+}
+
+.about-us {
+  text-align: center;
+  margin: 2rem 0;
+}
+.about-us h2 {
+  font-family: "Mr Dafoe", cursive;
+  font-size: 2.5rem;
+  color: #B66E00;
+}
+.about-us .social-icons {
+  margin-top: 1rem;
+}
+.about-us .social-icons a {
+  margin: 0 0.5rem;
+  font-size: 2rem;
+  color: orange;
+}
+.about-us .social-icons a:hover {
+  color: #B66E00;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+.content .image-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.content .image-text img {
+  max-width: 300px;
+  margin-right: 2rem;
+}
+.content .image-text .text {
+  max-width: 600px;
+}
+.content .video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .video iframe {
+  max-width: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/*# sourceMappingURL=styles.css.map */
