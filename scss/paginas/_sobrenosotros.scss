@@ -2,7 +2,7 @@
     text-align: center;
     margin: 2rem 0;
   
-    h2 {
+    h1 {
       font-family: $cursive-font-family;
       font-size: 2.5rem;
       color: $secondary-color;
@@ -31,15 +31,19 @@
     .image-text {
       display: flex;
       align-items: center;
+      flex-direction: column;
+      text-align: center;
       margin-bottom: 2rem;
   
       img {
-        max-width: 300px;
-        margin-right: 2rem;
+        max-width: 100%;
+        margin-right: 1rem;
       }
   
       .text {
         max-width: 600px;
+        text-align: justify;
+        margin-bottom: 2rem;
       }
     }
   
