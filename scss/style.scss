@@ -18,6 +18,53 @@ $sans-serif-font-family: 'Lato', sans-serif;
     transition: $property $duration $timing;
 }
 
+@mixin animation($name, $duration, $timing, $iteration){
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing;
+  animation-iteration-count: $iteration;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes customBounceIn{
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(1.1);
+
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
 * {
   margin: 0;
   padding: 0;

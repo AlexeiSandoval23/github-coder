@@ -15,8 +15,11 @@
         margin: 0 0.5rem;
         font-size: 2rem;
         color: $primary-color;
+        @include animation(bounceIn, 0.6s, ease, 1);
+        
         &:hover {
           color: $secondary-color;
+          @include animation(zoomIn, 0.3s, ease, 1);
         }
       }
     }
@@ -55,4 +58,5 @@
       }
     }
   }
+  
   
